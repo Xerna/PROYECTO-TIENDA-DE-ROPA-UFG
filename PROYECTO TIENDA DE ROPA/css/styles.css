@@ -43,9 +43,9 @@ img{
 #hero-section{
     display: flex;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.527),rgba(16, 0, 158, 0.26)),url(../assets/woman-1284411.jpg); /*Color de fondo*/
-    background-position: center top;
-    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.527),rgba(16, 0, 158, 0.26)),url(../assets/woman-1284411.jpg),url(../assets/winter-landscape-2571788.jpg); /*Color de fondo*/
+    background-position: left center, right center;
+    background-size: contain;
     background-repeat: no-repeat;
     height: 45rem;
     justify-content: space-around;
@@ -57,16 +57,19 @@ img{
 .hero-text{
   
 }
-.blur-container{
-    
-}
-.bg-img{
-    object-fit: contain;
-}
 @media screen and (max-width: 480px){
 #hero-section{
     height: 30rem;
 }
+}
+.other-links-tittle{
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+    font-weight: 500;
+    border-bottom: 1px #6C63FF dashed;
+    width: 50rem;
+    padding: 1rem;
 }
 #other-links{
     width: 80%;
