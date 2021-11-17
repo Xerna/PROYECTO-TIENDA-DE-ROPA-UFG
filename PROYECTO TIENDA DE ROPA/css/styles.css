@@ -43,23 +43,28 @@ img{
    }
 }
 #hero-section{
+    background-color: #DBDAF2;
     display: flex;
     width: 100%;
-    background-image:url(../assets/winter-landscape-2571788.jpg); /*Color de fondo*/
-    background-position: right center, right center;
-    background-size: contain;
-    background-repeat: no-repeat;
     height: 45rem;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-size: 5rem;
     color: #FFFFFF;
     font-weight: 700;
     object-fit: contain;
 }
+.hero-text{
+    font-size: 4rem;
+    text-align: right;
+}
 .hero-img{
-    width: 63rem;
-    opacity: 0.7;
+    width: 50rem;
+    height: 60rem;
+    background-image: url(../assets/woman-editado.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 @media screen and (max-width: 480px){
 #hero-section{
