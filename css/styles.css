@@ -205,60 +205,57 @@ body{
     border-bottom: 1px solid #567AFC;
 }
 .shop{
-    width: calc(99% - 15rem);
+    width: 90%;
+    margin: 0 auto;
 }
 .container{
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-@media screen and (max-width: 480px){
-    .shop{
-        margin-top: 3rem;
-        width: 98%;
-    }
-.container{
-    justify-content: space-evenly;
-    align-items: center;
-}
-}
-
 .item{
     display: grid; 
-  grid-template-columns: 2fr 0.5fr; 
-  grid-template-rows: 1.5fr 1fr; 
-  gap: 0.5rem 0px; 
-  grid-template-areas: 
+    grid-template-columns: 2fr 0.5fr; 
+    grid-template-rows: 1.5fr 1fr; 
+    gap: 0.5rem 0px; 
+    grid-template-areas: 
     "img-item img-item"
     "item-tittle item-price"; 
-    width: 20rem;
-    height: 20rem;
+    width: 9.5rem;
+    height: 15rem;
+    border-radius: 12px;
+    background: #f0f0f0;
+    box-shadow:  2px 2px 8px #d0d0d0,
+             -2px -2px 8px #f0f0f0;
+    margin: 1rem 0;
 }
 .item-tittle { 
     grid-area: item-tittle;
-    color: #E0DFF2; 
+    color: #000;
+    background-color: #fff;
+    padding-left: 0.7rem;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center; 
 }
 .img-item { 
     grid-area: img-item; 
-    background-color: #6159e6; /*Cambiar color de fondo del producto (Se le cambiara a todos)*/
-    width: 20rem;
-    height: 16rem;
-    object-fit: contain;
+    background-color: #f0f0f0;
+    width: 8rem;
+    height: 12rem;
+    margin: 0 auto;
+     /*Cambiar color de fondo del producto (Se le cambiara a todos)*/
+    object-fit: scale-down;
+    object-position: center;
 }
 .item-price { grid-area: item-price; 
     font-weight: 500;
-    color: #B163FF; /*Cambiar color del precio*/
+    color: greenyellow; /*Cambiar color del precio*/
     text-align: right;
-}
-@media screen and (max-width: 480px){
-        .item{
-            gap: 0.2rem 0px;
-            width: 8rem;
-            height: 8rem;
-            margin:0.5rem;
-        }
-        .img-item{
-            width: 8rem;
-            height: 6rem;
-        }
+    background-color: #fff;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.2rem;
 }
