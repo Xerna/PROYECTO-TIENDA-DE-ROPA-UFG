@@ -93,12 +93,10 @@ body{
 }
 #about-us{
     width: 90%;
-    height: 20rem;
+    height: 27rem;
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 50rem;
 }
 .about-us-tittle{
     text-align: center;
@@ -114,12 +112,12 @@ body{
     width: 90%;
     margin: 0 auto;
     display: flex;
-    flex: 0 0 50%;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1rem;
 }
 .card{
+    flex-grow: 1;
     border-radius: 35px;
     background: #fafafa;
     box-shadow:  2px 2px 12px #bebebe,
@@ -140,14 +138,18 @@ body{
     width: 5.5rem;
     height: 5.5rem;
     object-fit: contain;
-    margin: 0.5rem auto;
+    margin: 1rem auto 0 auto;
 }
+.last{
+    width: 12rem;
+}
+
 .card-tittle { 
     height: 0.5rem;
     grid-area: card-tittle;
-    color:#E0DFF2;  /*Cambiar color de letra*/
+    color: #fff;;  /*Cambiar color de letra*/
     text-align: center;
-    background-color:#B163FF; /*Cambiar color de boton*/
+    background-color:#6159E6; /*Cambiar color de boton*/
 	border-radius:20px;
 	display:inline-block;
 	cursor:pointer;
@@ -157,7 +159,106 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: 500;
     margin: 0 auto;
 }
+.card-tittle:hover{
+    background-color: #567AFC;
+}
+.last-tittle{
+    width: 10rem;
+}
+[data-tab-content]{
+    display: none;
+}
+.active[data-tab-content]{
+    display: block;
+}
+#category-list{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.category-tittle{
+    border: 2px solid #567AFC;
+    padding: 1rem 0;
+    width: 10rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #567AFC;
+}
+.categories{
+    padding-top: 1rem;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    font-weight: 500;   
+}
+.category{
+    margin-top: 0.5rem;
+    font-weight: 250;
+    cursor: pointer;
+    color: #333333;
+}
+.category.active{
+    border-bottom: 1px solid #567AFC;
+}
+.shop{
+    width: calc(99% - 15rem);
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 480px){
+    .shop{
+        margin-top: 3rem;
+        width: 98%;
+    }
+.container{
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
+.item{
+    display: grid; 
+  grid-template-columns: 2fr 0.5fr; 
+  grid-template-rows: 1.5fr 1fr; 
+  gap: 0.5rem 0px; 
+  grid-template-areas: 
+    "img-item img-item"
+    "item-tittle item-price"; 
+    width: 20rem;
+    height: 20rem;
+}
+.item-tittle { 
+    grid-area: item-tittle;
+    color: #E0DFF2; 
+}
+.img-item { 
+    grid-area: img-item; 
+    background-color: #6159e6; /*Cambiar color de fondo del producto (Se le cambiara a todos)*/
+    width: 20rem;
+    height: 16rem;
+    object-fit: contain;
+}
+.item-price { grid-area: item-price; 
+    font-weight: 500;
+    color: #B163FF; /*Cambiar color del precio*/
+    text-align: right;
+}
+@media screen and (max-width: 480px){
+        .item{
+            gap: 0.2rem 0px;
+            width: 8rem;
+            height: 8rem;
+            margin:0.5rem;
+        }
+        .img-item{
+            width: 8rem;
+            height: 6rem;
+        }
+    }
