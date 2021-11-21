@@ -107,6 +107,17 @@ body{
     width: 15rem;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+@media (min-width: 1025px){
+    #about-us{
+        height: 24rem;
+    }
+    .about-us-tittle{
+        font-size: 1.8rem;
+        width: 30rem;
+        padding-bottom: 0.8rem;
+    }
 }
 .cards{
     width: 90%;
@@ -143,6 +154,15 @@ body{
 .last{
     width: 12rem;
 }
+@media (min-width: 1025px){
+    .cards{
+        gap:2rem;
+    }
+    .card{
+        flex-basis: calc(90% / 3);
+        height: 15rem;
+    }
+}
 
 .card-tittle { 
     height: 0.5rem;
@@ -168,6 +188,17 @@ body{
 }
 .last-tittle{
     width: 10rem;
+}
+@media (min-width: 1025px){
+    .img-card{
+        width: 9rem;
+        height: 9rem;
+    }
+    .card-tittle,.last-tittle{
+        width: 12rem;
+        padding:0.9rem;
+        font-size: 0.8rem;
+    }
 }
 [data-tab-content]{
     display: none;
@@ -203,6 +234,11 @@ body{
 }
 .category.active{
     border-bottom: 1px solid #567AFC;
+}
+@media (min-width: 1025px){
+    .store{
+        display: flex;
+    }
 }
 .shop{
     width: 90%;
